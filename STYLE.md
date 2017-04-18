@@ -8,9 +8,10 @@ global variables(only allowed inside one module): _camelCase
 
 We have decided to specify the variable type after the variable(appendix), for better readability:
 
-_int = integer
-_float = float
-_str = string
-_bool = boolean
-_char = character
-_obj = object
+_int = integer</br>
+_float = float</br>
+_str = string</br>
+_bool = boolean</br>
+_char = character</br>
+_obj = object</br>
+_arr = array</br>
