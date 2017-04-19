@@ -1,1 +1,1 @@
-__all__ = ['data', 'exepctions', 'frontEnd', 'mathCore', 'objects', 'utility']
+__all__ = ['data', 'excpetions', 'frontEnd', 'mathCore', 'objects', 'utility']
