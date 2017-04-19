@@ -1,6 +1,6 @@
 def add(A, B):
 	if len(A) != len(B):
-		raise SpaceScript.exceptions.utility.dimensionError(
+		raise dimensionError(
 			"Line 3 in <module> myArray", "vector dimensions not equal")
 	vectorOut = []
 	for iteration in range(len(A)):
