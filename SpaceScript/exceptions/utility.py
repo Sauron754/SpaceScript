@@ -1,4 +1,4 @@
-class Error(exception):
+class Error(Exception):
 	"""Parent class for all exceptions and errors in this module."""
 	pass
 
