@@ -32,11 +32,4 @@ class CMO(orbiatalObject):
 		self.rotation_arr = rotation_arr
 
 	def getSphereOfInfluence(self, point_arr, pointMass_int):
-		surfaceGravity = additions.constants.G * (self.mass_int * pointMass_int) / (self.surfaceRadius_int)
-		gravitationSphereRadius_float = sqrt(surfaceGravity * 0.01 * additions.constants.G * self.mass_int * pointMass_int) / surfaceGravity * 0.01
-		pointInsideSphere = False
-		if (point_arr[0]**2 + point_arr[1]**2 + point_arr[2]**2) == gravitationSphereRadius_float**2:
-			pointInsideSphere = True
-		else:
-			pointInsideSphere = False
-		return pointInsideSphere
+		
