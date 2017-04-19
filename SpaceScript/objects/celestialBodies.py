@@ -1,7 +1,8 @@
 class orbiatalObject():
-	def __init__(self, eccentricity_float, semiMajorAxis_arr, inclination_float,
-				 argumentOfPeriapsis_float, trueAnomaly_float,
-				 longitudeOfAscendingNode_float,
+	def __init__(self, eccentricity_float, semiMajorAxis_arr, 
+				 inclination_float, argumentOfPeriapsis_float,
+				 trueAnomaly_float,
+				 longitudeOfAscendingNode_float, parent_str,
 				 referenceDirection_arr = [1, 0, 0]):
 		self.eccentricity_float = eccentricity_float
 		self.semiMajorAxis_arr = semiMajorAxis_arr
@@ -9,21 +10,22 @@ class orbiatalObject():
 		self.argumentOfPeriapsis_float = argumentOfPeriapsis_float
 		self.trueAnomaly_float = trueAnomaly_float
 		self.longitudeOfAscendingNode_float = longitudeOfAscendingNode_float
+		self.parent_str = parent_str
 		self.referenceDirection_arr = referenceDirection_arr
 
-	def getPosition(self):
+	def getPosition(self, parentPosition_arr):
 
 
 class CMO(orbiatalObject):
-	def __init__(self, eccentricity_float, semiMajorAxis_arr, inclination_float,
+	def __init__(self, eccentricity_float, semiMajorAxis_arr,inclination_float,
 				 argumentOfPeriapsis_float, trueAnomaly_float,
 				 longitudeOfAscendingNode_float, mass_int, surfaceRadius_int,
-				 rotation_arr,
+				 rotation_arr, parent_str,
 				 atmosphereRadius_int = 0, atmospheric_bool = False,
 				 referenceDirection_arr = [1, 0, 0]):
 		super().__init__(eccentricity_float, semiMajorAxis_arr, inclination_float,
 				 argumentOfPeriapsis_float, trueAnomaly_float,
-				 longitudeOfAscendingNode_float,
+				 longitudeOfAscendingNode_float, parent_str,
 				 referenceDirection_arr)
 		self.mass_int = mass_int
 		self.radius_int = radius_int
