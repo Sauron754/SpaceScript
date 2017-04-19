@@ -13,7 +13,7 @@ def newWorldSave(saveName_str):
 	if not os.path.exists(saveFolder_str):
 		os.makedirs(saveFolder_str)
 		universeState_obj= open(saveFolder_str+chr(92)+"current.universe","w")
-		universeState_obj.write("0")
+		universeState_obj.write("0"+chr(10)+chr(13))
 		universeState_obj.close()
 		return(True)
 		
@@ -44,14 +44,22 @@ def setWorldProperties(worldName_str, valueCount_int, propertyValue_str):
 		universeState_obj=open(saveFolder_str+chr(92)+"current.universe","r")
 		worldProperties_arr = universeState_obj.readlines()
 		universeState_obj.close()
-		if len(worldProperties_arr)<valueCount_int-1:
+		print(worldProperties_arr)
+		print(len(worldProperties_arr))
+		if len(worldProperties_arr)<(valueCount_int):
 			return(False)
 			
-		elif len(worldProperties_arr) == (valueCount_int-1):
-			worldProperties_arr.insert(len(worldProperties_arr), propertyValue_str)
+		elif len(worldProperties_arr) == (valueCount_int):
+			universeState_obj=open(saveFolder_str+chr(92)+"current.universe","a")
+			universeState_obj.write(propertyValue_str+chr(10)+chr(13))
+			universeState_obj.close()
+			return(True)
 			
-		elif len(worldProperties_arr)>valueCount_int-1:
-			worldProperties_arr[valueCount_int]=propertyValue_str+chr(10)
+		elif len(worldProperties_arr)>(valueCount_int):
+			worldProperties_arr[valueCount_int]=propertyValue_str+chr(10)+chr(13)
 			universeState_obj=open(saveFolder_str+chr(92)+"current.universe","w")
 			universeState_obj.writelines(worldProperties_arr)
+			universeState_obj.close()
 			return(True)
+
+		
