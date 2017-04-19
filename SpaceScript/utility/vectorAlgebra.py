@@ -4,7 +4,7 @@ def add(A, B):
 			"Line 3 in <module> myArray", "vector dimensions not equal")
 	vectorOut = []
 	for iteration in range(len(A)):
-		vectorOut.appen(A[iteration] + B[iteration])
+		vectorOut.append(A[iteration] + B[iteration])
 	return vectorOut
 
 def scalarProduct(A, B):
