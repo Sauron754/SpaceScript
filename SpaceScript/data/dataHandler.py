@@ -87,15 +87,15 @@ def getCraftProperties(worldName_str, craftName_str, valueCount_int):
 		universeState_obj.close()
 		return(outPut_str[valueCount_int])
 		
-'''	
-def setCraftProperties(worldName_str, valueCount_int, propertyValue_str):
+
+def setCraftProperties(worldName_str, valueCount_int, craftName_str, propertyValue_str):
 	#replaces one value of the current.universe with andother one 
-	saveFolder_str = modulePath + chr(92) +worldName_str
+	saveFolder_str=modulePath+chr(92)+worldName_str+chr(92)+"crafts"
 	if not os.path.exists(saveFolder_str):
 		return(False)
 		
 	else:
-		universeState_obj=open(saveFolder_str+chr(92)+"current.universe","r")
+		universeState_obj=open(saveFolder_str+chr(92)+craftName_str+".craft","r")
 		worldProperties_arr = universeState_obj.readlines()
 		universeState_obj.close()
 		print(worldProperties_arr)
@@ -104,15 +104,14 @@ def setCraftProperties(worldName_str, valueCount_int, propertyValue_str):
 			return(False)
 			
 		elif len(worldProperties_arr) == (valueCount_int):
-			universeState_obj=open(saveFolder_str+chr(92)+"current.universe","a")
+			universeState_obj=open(saveFolder_str+chr(92)+craftName_str+".craft","a")
 			universeState_obj.write(propertyValue_str+chr(10)+chr(13))
 			universeState_obj.close()
 			return(True)
 			
 		elif len(worldProperties_arr)>(valueCount_int):
 			worldProperties_arr[valueCount_int]=propertyValue_str+chr(10)+chr(13)
-			universeState_obj=open(saveFolder_str+chr(92)+"current.universe","w")
+			universeState_obj=open(saveFolder_str+chr(92)+craftName_str+".craft","w")
 			universeState_obj.writelines(worldProperties_arr)
 			universeState_obj.close()
 			return(True)
-'''		
