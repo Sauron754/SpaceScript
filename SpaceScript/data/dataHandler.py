@@ -1,15 +1,15 @@
 import os
 
 def __init__():
-	global modulePath
-	modulePath = os.path.dirname(os.path.abspath(__file__))
+	global modulePath_str
+	modulePath_str = os.path.dirname(os.path.abspath(__file__))
 
 
 	
 def newWorldSave(saveName_str):
 	#Generates a new world save with specified name
 	#saveName_str style: name
-	saveFolder_str = modulePath + chr(92) +saveName_str
+	saveFolder_str = modulePath_str + chr(92) +saveName_str
 	if not os.path.exists(saveFolder_str):
 		os.makedirs(saveFolder_str)
 		os.makedirs(saveFolder_str+chr(92)+"crafts")
@@ -25,7 +25,7 @@ def newWorldSave(saveName_str):
 		
 def getWorldProperties(worldName_str, valueCount_int):
 	# returns values from the current.universe file
-	saveFolder_str = modulePath + chr(92) +worldName_str
+	saveFolder_str = modulePath_str + chr(92) +worldName_str
 	if not os.path.exists(saveFolder_str):
 		return(False)
 		
@@ -38,7 +38,7 @@ def getWorldProperties(worldName_str, valueCount_int):
 		
 def setWorldProperties(worldName_str, valueCount_int, propertyValue_str):
 	#replaces one value of the current.universe with andother one 
-	saveFolder_str = modulePath + chr(92) +worldName_str
+	saveFolder_str = modulePath_str + chr(92) +worldName_str
 	if not os.path.exists(saveFolder_str):
 		return(False)
 		
@@ -66,7 +66,7 @@ def setWorldProperties(worldName_str, valueCount_int, propertyValue_str):
 
 
 def newCraftSave(worldName_str, craftName_str)
-	saveFolder_str=modulePath+chr(92)+worldName_str+chr(92)+"crafts"
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"crafts"
 	if not os.path.exists(saveFolder_str+chr(92)+craftName_str+".craft"):
 		universeState_obj= open(saveFolder_str+chr(92)+craftName_str+".craft","w")
 		universeState_obj.close()
@@ -77,7 +77,7 @@ def newCraftSave(worldName_str, craftName_str)
 		
 def getCraftProperties(worldName_str, craftName_str, valueCount_int):
 	# returns values from the current.universe file
-	saveFolder_str=modulePath+chr(92)+worldName_str+chr(92)+"crafts"
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"crafts"
 	if not os.path.exists(saveFolder_str+chr(92)+craftName_str+".craft"):
 		return(False)
 		
@@ -90,7 +90,7 @@ def getCraftProperties(worldName_str, craftName_str, valueCount_int):
 
 def setCraftProperties(worldName_str, valueCount_int, craftName_str, propertyValue_str):
 	#replaces one value of the current.universe with andother one 
-	saveFolder_str=modulePath+chr(92)+worldName_str+chr(92)+"crafts"
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"crafts"
 	if not os.path.exists(saveFolder_str):
 		return(False)
 		
