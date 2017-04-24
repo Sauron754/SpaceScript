@@ -115,3 +115,55 @@ def setCraftProperties(worldName_str, valueCount_int, craftName_str, propertyVal
 			universeState_obj.writelines(worldProperties_arr)
 			universeState_obj.close()
 			return(True)
+
+			
+			def newFlightSave(worldName_str, FlightName_str)
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"Flights"
+	if not os.path.exists(saveFolder_str+chr(92)+FlightName_str+".Flight"):
+		universeState_obj= open(saveFolder_str+chr(92)+FlightName_str+".Flight","w")
+		universeState_obj.close()
+		return(True)
+		
+	else:
+		return(False)
+		
+def getFlightProperties(worldName_str, FlightName_str, valueCount_int):
+	# returns values from the current.universe file
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"Flights"
+	if not os.path.exists(saveFolder_str+chr(92)+FlightName_str+".Flight"):
+		return(False)
+		
+	else:
+		universeState_obj=open(saveFolder_str+chr(92)+FlightName_str+".Flight","r")
+		outPut_str = universeState_obj.readlines()
+		universeState_obj.close()
+		return(outPut_str[valueCount_int])
+		
+
+def setFlightProperties(worldName_str, valueCount_int, FlightName_str, propertyValue_str):
+	#replaces one value of the current.universe with andother one 
+	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"Flights"
+	if not os.path.exists(saveFolder_str):
+		return(False)
+		
+	else:
+		universeState_obj=open(saveFolder_str+chr(92)+FlightName_str+".Flight","r")
+		worldProperties_arr = universeState_obj.readlines()
+		universeState_obj.close()
+		print(worldProperties_arr)
+		print(len(worldProperties_arr))
+		if len(worldProperties_arr)<(valueCount_int):
+			return(False)
+			
+		elif len(worldProperties_arr) == (valueCount_int):
+			universeState_obj=open(saveFolder_str+chr(92)+FlightName_str+".Flight","a")
+			universeState_obj.write(propertyValue_str+chr(10)+chr(13))
+			universeState_obj.close()
+			return(True)
+			
+		elif len(worldProperties_arr)>(valueCount_int):
+			worldProperties_arr[valueCount_int]=propertyValue_str+chr(10)+chr(13)
+			universeState_obj=open(saveFolder_str+chr(92)+FlightName_str+".Flight","w")
+			universeState_obj.writelines(worldProperties_arr)
+			universeState_obj.close()
+			return(True)
