@@ -117,7 +117,7 @@ def setCraftProperties(worldName_str, valueCount_int, craftName_str, propertyVal
 			return(True)
 
 			
-			def newFlightSave(worldName_str, FlightName_str)
+def newFlightSave(worldName_str, FlightName_str)
 	saveFolder_str=modulePath_str+chr(92)+worldName_str+chr(92)+"Flights"
 	if not os.path.exists(saveFolder_str+chr(92)+FlightName_str+".Flight"):
 		universeState_obj= open(saveFolder_str+chr(92)+FlightName_str+".Flight","w")
