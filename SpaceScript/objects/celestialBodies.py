@@ -23,9 +23,6 @@ class orbiatalObject():
 		self.parent_str = parent_str
 		self.referenceDirection_arr = referenceDirection_arr
 
-	def setPosition(self, parentPosition_arr, time_int):
-
-
 class CMO(orbiatalObject):
 	def __init__(self, eccentricity_float, semiMajorAxis_arr,inclination_float,
 				 argumentOfPeriapsis_float, trueAnomaly_float, position_arr,
