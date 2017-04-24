@@ -5,7 +5,7 @@ from SpaceScript.utility import constants
 
 def calcGravitationalInfluence(orbital_obj):
 	#calculates the gravitational influence of a Parent to a orbiting or passing body
-	ParentBody_obj = orbital_obj.getParent() #??function name
+	ParentBody_obj = eval(orbital_obj.parent_str)
 	dist_arr=[0,0,0]
 	orbitalPos_arr=orbital_obj.position_arr
 	ParentPos_arr=ParentBody_obj.position_arr
