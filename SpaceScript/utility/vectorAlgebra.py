@@ -29,6 +29,12 @@ def scalarProduct(A_arr, B_arr):
 		scalar_float += A_arr[iteration] * B_arr[iteration]
 	return scalar_float
 
+def vectorScalarProduct(A_arr, scalar_float):
+	vectorOut_arr = []
+	for iteration in range(len(A_arr)):
+		vectorOut_arr.append(A_arr[iteration] * scalar_float)
+	return vectorOut_arr
+
 def length(A_arr):
 	dimensionSum_float = 0
 	for iteration in range(len(A_arr)):
