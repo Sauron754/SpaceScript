@@ -6,6 +6,9 @@ from SpaceScript.utility import calcFunctions
 
 gravitationForce = SpaceScript.utility.calcFunctions.gravitationForce()
 objectDistance = SpaceScript.utility.calcFunctions.objectDistance()
+vectorLength = SpaceScript.utility.vectorAlgebra.length()
+vectorInvert = SpaceScript.utility.vectorAlgebra.invert()
+vectorAdd = SpaceScript.utility.vectorAlgebra.add()
 
 class orbiatalObject():
 	def __init__(self, eccentricity_float, semiMajorAxis_arr, 
@@ -41,8 +44,8 @@ class CMO(orbiatalObject):
 
 	def getSphereOfInfluence(self, object_obj):
 		influence = False
-		surfaceGravity = gravitationForce(self.mass_int, object_obj.mass_int, objectDistance(self, object_obj))
-		distance = sqrt(surfaceGravity * G * self.mass_int * object_obj.mass_int) / surfaceGravity
-		if (object_obj[0]**2 + object_obj[1]**2 + object_obj[2]**2 < distance**2):
+		distance = vectorLength(self.semiMajorAxis_arr) * (self.mass_int / object_obj.mass_int)**(2/5)
+		relativePosition_arr = vectorAdd(object_obj.position_arr, vectorInvert(slef.position_arr))
+		if (relativePosition_arr[0]**2 + relativePosition_arr[1]**2 + relativePosition_arr[2]**2 < distance**2):
 			influence = True
 		return influence
