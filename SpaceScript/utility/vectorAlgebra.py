@@ -4,7 +4,8 @@ from SpaceScript.exceptions import utility
 
 def dimensionCheckFatal(A_arr, B_arr):
 	if len(A_arr) != len(B_arr):
-		raise SpaceScript.exceptions.utility.dimensionError("vector dimensions 												   not equal")
+		raise SpaceScript.exceptions.utility.dimensionError(
+			"vector dimensions not equal")
 
 def dimensionCheck(A_arr, B_arr):
 	equalDimensions_bool = False
@@ -35,4 +36,14 @@ def length(A_arr):
 	length_float = sqrt(dimensionSum_float)
 	return length_float
 
-
+def crossProduct(A_arr, B_arr):
+	if len(A_arr) != 3:
+		raise SpaceScript.exceptions.utility.dimensionError(
+			"A_arr is not 3 dimensional")
+	if len(B_arr) != 3:
+		raise SpaceScript.exceptions.utility.dimensionError(
+			"B_arr is not 3 dimensional")
+	vectorOut_arr = []
+	vectorOut_arr.append(A_arr[1] * B_arr[2] - A_arr[2] * B_arr[1])
+	vectorOut_arr.append(A_arr[2] * B_arr[0] - A_arr[0] * B_arr[2])
+	vectorOut_arr.append(A_arr[0] * B_arr[1] - A_arr[1] * B_arr[0])
