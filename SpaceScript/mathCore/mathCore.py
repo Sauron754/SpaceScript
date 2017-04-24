@@ -29,4 +29,5 @@ def calcOrbitalPosition(orbital_obj, time_float):
 	for iteration_int in range(len(newOrbitalVelocity_arr)):
 		deltaPos_arr[iteration_int]=time_float*newOrbitalVelocity_arr[iteration_int]
 	momPos_arr= SpaceScript.utility.vectorAlgebra.add(deltaPos_arr, momPos_arr)
+	orbital_obj.setVelocity(newOrbitalVelocity_arr)
 	return momPos_arr
