@@ -10,5 +10,5 @@ def objectDistance(objectA_obj, objectB_obj):
 	distance = SpaceScript.utility.vectorAlgebra.length(vectorAB)
 	return distance
 def gravitationForce(objectA_obj, objectB_obj):
-	force_float = G * (objectA_obj.mass_int * objectB_obj.mass_int) / (SpaceScript.utility.vectorAlgebra.length(objectA_obj,objectB_obj))
+	force_float = G * (objectA_obj.mass_int * objectB_obj.mass_int) / (SpaceScript.utility.vectorAlgebra.length(objectA_obj,objectB_obj)**2)
 	return force_float
