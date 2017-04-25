@@ -1,6 +1,7 @@
 import SpaceScript
 from SpaceScript import exceptions
 from SpaceScript.exceptions import utility
+import math
 
 def dimensionCheckFatal(A_arr, B_arr):
 	if len(A_arr) != len(B_arr):
@@ -22,7 +23,7 @@ def add(A_arr, B_arr):
 		vectorOut_arr.append(A_arr[iteration] + B_arr[iteration])
 	return vectorOut_arr
 
-def scalarProduct(A_arr, B_arr):
+def dotProduct(A_arr, B_arr):
 	dimensionCheckFatal(A_arr, B_arr)
 	scalar_float = 0
 	for iteration in range(len(A_arr)):
@@ -59,3 +60,8 @@ def invert(A_arr):
 	for iteration in range(len(A_arr)):
 		vectorOut_arr.append(-1 * A_arr[iteration])
 	return vectorOut_arr
+
+def angle(A_arr, B_arr):
+	dimensionCheckFatal(A_arr, B_arr)
+	angle = math.acos(dotProduct(A_arr, B_arr) / (length(A_arr) * length(B_arr)))
+	return angle
