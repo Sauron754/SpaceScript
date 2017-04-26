@@ -54,6 +54,7 @@ def crossProduct(A_arr, B_arr):
 	vectorOut_arr.append(A_arr[1] * B_arr[2] - A_arr[2] * B_arr[1])
 	vectorOut_arr.append(A_arr[2] * B_arr[0] - A_arr[0] * B_arr[2])
 	vectorOut_arr.append(A_arr[0] * B_arr[1] - A_arr[1] * B_arr[0])
+	return vectorOut_arr
 
 def invert(A_arr):
 	vectorOut_arr = []
