@@ -4,7 +4,7 @@ from SpaceScript.frontEnd import bashFunctions
 
 def midParser(command_str):
 	commandSplit_str = command_str.split(" ")
-	arguments = []
+	arguments_arr = []
 	for element in commandSplit_str:
 		if element != commandSplit_str[0]:
 			arguments.append(element)
