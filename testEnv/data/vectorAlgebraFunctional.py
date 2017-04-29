@@ -70,3 +70,11 @@ def add():
 			return False
 	else:
 		return True
+
+def dotProduct():
+	arguments1_arr = [[1, 2], [2, 3]]
+	arguments2_arr = [[1, 2, 3], [4, 5, 6]]
+	results1_float = 8
+	results2_float = 32
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.dotProduct(
+		arguments1_arr[0], arguments1_arr[1])
