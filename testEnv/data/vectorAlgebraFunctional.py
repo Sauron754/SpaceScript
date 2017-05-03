@@ -80,7 +80,7 @@ def dotProduct():
 	testResults1_float = SpaceScript.utility.vectorAlgebra.dotProduct(
 		arguments1_arr[0], arguments1_arr[1])
 	testResults2_float = SpaceScript.utility.vectorAlgebra.dotProduct(
-		arguments2_arr[0], arguments2_arr[1]
+		arguments2_arr[0], arguments2_arr[1])
 	if testResults1_float == results1_float:
 		runthroughs_arr.append(True)
 	else:
@@ -89,3 +89,25 @@ def dotProduct():
 		runthroughs_arr.append(True)
 	else:
 		runthroughs_arr.append(False)
+	return runthroughs_arr
+
+def vectorScalarProduct():
+	arguments1_arr = [[1, 2], 2]
+	arguments2_arr = [[2, 4], 3]
+	results1_arr = [2, 4]
+	results2_arr = [6, 12]
+	runthroughs_arr = []
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.vectorScalarProduct(
+		arguments1_arr[0], arguments1_arr[1])
+	testResults2_arr = SpaceScript.utility.vectorAlgebra.vectorScalarProduct(
+		arguments2_arr[0], arguments2_arr[1])
+	if testResults1_arr == results1_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
