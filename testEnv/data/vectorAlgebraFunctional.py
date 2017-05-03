@@ -76,5 +76,16 @@ def dotProduct():
 	arguments2_arr = [[1, 2, 3], [4, 5, 6]]
 	results1_float = 8
 	results2_float = 32
-	testResults1_arr = SpaceScript.utility.vectorAlgebra.dotProduct(
+	runthroughs_arr = []
+	testResults1_float = SpaceScript.utility.vectorAlgebra.dotProduct(
 		arguments1_arr[0], arguments1_arr[1])
+	testResults2_float = SpaceScript.utility.vectorAlgebra.dotProduct(
+		arguments2_arr[0], arguments2_arr[1]
+	if testResults1_float == results1_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
