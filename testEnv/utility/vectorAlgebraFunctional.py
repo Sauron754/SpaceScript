@@ -46,3 +46,68 @@ def dimensionCheck():
 			return False
 	else:
 		return True
+
+def add():
+	arguments1_arr = [[1, 3], [4, 3]]
+	arguments2_arr = [[1, 2, 3], [4, 5, 6]]
+	results1_arr = [5, 6]
+	results2_arr = [5, 7, 9]
+	runthroughs_arr = []
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.add(
+		arguments1_arr[0], arguments1_arr[1])
+	testResults2_arr = SpaceScript.utility.vectorAlgebra.add(
+		arguments2_arr[0], arguments2_arr[1])
+	if testResults1_arr == results1_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	for element in runthroughs_arr:
+		if element != True:
+			return False
+	else:
+		return True
+
+def dotProduct():
+	arguments1_arr = [[1, 2], [2, 3]]
+	arguments2_arr = [[1, 2, 3], [4, 5, 6]]
+	results1_float = 8
+	results2_float = 32
+	runthroughs_arr = []
+	testResults1_float = SpaceScript.utility.vectorAlgebra.dotProduct(
+		arguments1_arr[0], arguments1_arr[1])
+	testResults2_float = SpaceScript.utility.vectorAlgebra.dotProduct(
+		arguments2_arr[0], arguments2_arr[1])
+	if testResults1_float == results1_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
+def vectorScalarProduct():
+	arguments1_arr = [[1, 2], 2]
+	arguments2_arr = [[2, 4], 3]
+	results1_arr = [2, 4]
+	results2_arr = [6, 12]
+	runthroughs_arr = []
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.vectorScalarProduct(
+		arguments1_arr[0], arguments1_arr[1])
+	testResults2_arr = SpaceScript.utility.vectorAlgebra.vectorScalarProduct(
+		arguments2_arr[0], arguments2_arr[1])
+	if testResults1_arr == results1_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
