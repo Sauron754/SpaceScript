@@ -40,7 +40,7 @@ def length(A_arr):
 	dimensionSum_float = 0
 	for iteration in range(len(A_arr)):
 		dimensionSum_float += (A_arr[iteration]**2)
-	length_float = sqrt(dimensionSum_float)
+	length_float = math.sqrt(dimensionSum_float)
 	return length_float
 
 def crossProduct(A_arr, B_arr):
