@@ -111,3 +111,74 @@ def vectorScalarProduct():
 		runthroughs_arr.append(False)
 	return runthroughs_arr
 
+def length():
+	arguments1_arr = [3, 4]
+	arguments2_arr = [3, 4, 0]
+	results1_float = 5
+	results2_float = 5
+	runthroughs_arr = []
+	testResults1_float = SpaceScript.utility.vectorAlgebra.length(
+		arguments1_arr)
+	testResults2_float = SpaceScript.utility.vectorAlgebra.length(
+		arguments2_arr)
+	if testResults1_float == results1_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_float == results1_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
+def crossProduct():
+	arguments1_arr = [[1, 2, 3], [8, 9, 10]]
+	results1_arr = [-7, 14, -7]
+	runthroughs_arr = []
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.crossProduct(
+		arguments1_arr[0], arguments1_arr[1])
+	if testResults1_arr == results1_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
+def invert():
+	arguments1_arr = [1, 2, 3]
+	arguments2_arr = [-1, -2, 3]
+	results1_arr = [-1, -2, -3]
+	results2_arr = [1, 2, -3]
+	runthroughs_arr = []
+	testResults1_arr = SpaceScript.utility.vectorAlgebra.invert(
+		arguments1_arr)
+	testResults2_arr = SpaceScript.utility.vectorAlgebra.invert(
+		arguments2_arr)
+	if testResults1_arr == results1_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_arr == results2_arr:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
+
+def angle():
+	arguments1_arr = [[1, 2, 3], [-2, -4, -1]]
+	arguments2_arr = [[1, 2, 3], [-2, -4, -6]]
+	results1_float = 2.431306616869781
+	results2_float = 3.141592653589793
+	runthroughs_arr = []
+	testResults1_float = SpaceScript.utility.vectorAlgebra.angle(
+		arguments1_arr[0], arguments1_arr[1])
+	testResults2_float = SpaceScript.utility.vectorAlgebra.angle(
+		arguments2_arr[0], arguments2_arr[1])
+	if testResults1_float == results1_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	if testResults2_float == results2_float:
+		runthroughs_arr.append(True)
+	else:
+		runthroughs_arr.append(False)
+	return runthroughs_arr
