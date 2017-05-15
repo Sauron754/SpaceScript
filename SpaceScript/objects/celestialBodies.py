@@ -18,7 +18,7 @@ class orbitalObject():
 				 inclination_float = False,
 				 longitudeOfAscendingNode_float = False, 
 				 argumentOfPeriapsis_float = False, trueAnomaly_float = False,
-				 eccentricity_float = False, distanceFromParent_float = False):
+				 eccentricity_float = False):
 		self.parent_str = parent_str
 		self.position_arr = position_arr
 		self.velocity_arr = velocity_arr
@@ -31,7 +31,6 @@ class orbitalObject():
 		self.argumentOfPeriapsis_float = argumentOfPeriapsis_float
 		self.trueAnomaly_float = trueAnomaly_float
 		self.eccentricity_float = eccentricity_float
-		self.distanceFromParent_float = distanceFromParent_float
 		self.kepplerValidity = False
 
 	def kepplerUpdate():
@@ -39,3 +38,11 @@ class orbitalObject():
 
 	def impulseSystemChange():
 		self.kepplerValidity = False
+
+	def getSphereOfInfluence(self, object_obj):
+  		influence_bool = False
+  		distance_float = vectorLength(self.semiMajorAxis_arr) * (self.mass_int / object_obj.mass_int) ** (2 / 5)
+  		relativePosition_arr = vectorAdd(object_obj.position_arr, vectorInvert(self.position_arr))
+  		if (vectorLenght(relativePosition_arr) < distance):
+  			influence_bool = True
+  		return influence_bool
