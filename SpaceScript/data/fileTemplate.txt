@@ -1,0 +1,15 @@
+#all pseudo code ist written enclosed by .[]
+#lists shall be denoted as [element0, element1, element2]
+#comments are denoted as #comment
+
+[OBJECT]{
+	property:value;
+}
+
+[OBJECT(TICK)]{
+	tickcount:[TICKCOUNT]
+}
+
+[OBJECT(Flight)]{
+	property:value;
+}
