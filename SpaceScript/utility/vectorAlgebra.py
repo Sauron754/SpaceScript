@@ -66,3 +66,8 @@ def angle(A_arr, B_arr):
 	dimensionCheckFatal(A_arr, B_arr)
 	angle = math.acos(dotProduct(A_arr, B_arr) / (length(A_arr) * length(B_arr)))
 	return angle
+
+def unitVector(A_arr):
+	factor = 1 / length(A_arr)
+	vectorOut_arr = vectorScalarProduct(A_arr, factor)
+	return vectorOut_arr
