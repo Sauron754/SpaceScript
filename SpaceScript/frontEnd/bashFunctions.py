@@ -1,11 +1,14 @@
 import SpaceScript
 from SpaceScript import data
+from SpaceScript import exceptions
 from SpaceScript.data import dataHandler
+from SpaceScript.exceptions import frontEnd
+
 
 maxArguments = {"help": , "new": , "load":, }
 
 def help(*args):
-
+	SpaceScript.exceptions.frontEnd.argumentCountError(maxArguments["help"])
 	#when finished will return help for desired command
 
 def new(*args):
