@@ -1,5 +1,9 @@
 def clientTerminal(out_str):
-	print(out_str)
+	if out_str !== 'none':
+		print("> ")
+	else:
+		print(out_str + '\n')
+		print("> ")
 	command_str = input()
 	return command_str
 def terminal(option_int, out_str = 'none'):
