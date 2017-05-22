@@ -2,7 +2,10 @@ import SpaceScript
 from SpaceScript import data
 from SpaceScript.data import dataHandler
 
+maxArguments = {"help": , "new": , "load":, }
+
 def help(*args):
+
 	#when finished will return help for desired command
 
 def new(*args):
