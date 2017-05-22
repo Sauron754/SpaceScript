@@ -1,0 +1,23 @@
+This file explains the communication template of the threads
+
+1 Queues
+	1.1 Main-Com(MC) Queue [
+		can be passed to multiple threads is used by the threads to give/take commands to/from the main module
+		e.g. restartTerminal(), accelerate()
+	]
+	1.2 Inter-Thread(IT) Queue[
+		used to comunicate between threads; there can be more instances of IT Queues
+	]
+
+2 Pipes
+	1.1 Main-Thread(MT) Pipe [
+		same as Main-Com Queue; with the only difference of the restriction to two-way communication
+	]
+	1.2 Thread-Thread(TT) Pipe [
+		used to link two threads together
+	]
+
+3 Arrays
+	3.1 Hold-Array(H-Array) [
+		every thread is required to have a H-Array, because it is essential for communication timing
+	]
