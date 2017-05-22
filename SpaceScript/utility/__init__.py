@@ -1,1 +1,1 @@
-__all__ = ['calcFunctions', 'constants', 'vectorAlgebra']
+__all__ = ['calcFunctions', 'constants', 'terminalUtility', 'vectorAlgebra']
