@@ -18,6 +18,6 @@ This file explains the communication template of the threads
 	]
 
 3 Arrays
-	3.1 Hold-Array(H-Array) [
-		every thread is required to have a H-Array, because it is essential for communication timing
+	3.1 Hold-Value(H-Value) [
+		every thread is required to have a H-Value, because it is essential for communication timing; the H-Value is a boolean
 	]
