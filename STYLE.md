@@ -15,5 +15,6 @@ _bool = boolean</br>
 _char = character</br>
 _obj = object</br>
 _arr = array</br>
+_dict = dictionary</br>
 
 We are using a maximum line length of 80 characters(this can be neglected if it improves readability)
