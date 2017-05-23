@@ -17,7 +17,12 @@ This file explains the communication template of the threads
 		used to link two threads together
 	]
 
-3 Arrays
+3 Values
 	3.1 Hold-Value(H-Value) [
 		every thread is required to have a H-Value, because it is essential for communication timing; the H-Value is a boolean
+	]
+
+4 Arrays
+	4.1 Object-Array(O-Array) [
+		all relevant object instances should be passed to this array; it is multi-thread multi-accesible array both for read and write
 	]
