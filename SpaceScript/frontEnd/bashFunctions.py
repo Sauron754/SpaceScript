@@ -5,11 +5,11 @@ from SpaceScript.data import dataHandler
 from SpaceScript.utility import terminalUtility
 
 
-maxArguments = {"help": , "new": , "load":, }
+maxArguments_dict = {"help": , "new": , "load":, }
 
 def help(*args):
 	try:
-		SpaceScript.utility.terminalUtility.argumentCountCheck(maxArguments["help"])
+		SpaceScript.utility.terminalUtility.argumentCountCheck(maxArguments_dict["help"], args)
 	except argumentCountError:
 		#restartTerminal()
 	#when finished will return help for desired command
@@ -29,3 +29,4 @@ def load(*args):
 		#loadCraft
 	elif args[0] == "flight":
 		#loadFlight
+	
