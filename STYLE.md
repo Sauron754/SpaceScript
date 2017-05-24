@@ -16,5 +16,9 @@ _char = character</br>
 _obj = object</br>
 _arr = array</br>
 _dict = dictionary</br>
+_q = queue(cross-thread object)</br>
+_p = pipe(cross-thread object)</br>
+_a = cross-thread array(cross-thread object)</br>
+_v = cross-thread value(cross-thread object)</br>
 
 We are using a maximum line length of 80 characters(this can be neglected if it improves readability)
