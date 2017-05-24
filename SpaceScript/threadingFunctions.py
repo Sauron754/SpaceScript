@@ -8,6 +8,7 @@ def simThread(queues_arr, pipes_arr, holdValue_v, objectArray_arr, mainLock):
 
 def termThread(queues_arr, pipes_arr, holdValue_v, objectArray_arr, mainLock):
 	initialized_bool = True
+	lowTermThreadHold_v = multiprocessing.Value("i")
 
 	while initialized_bool:
 		
