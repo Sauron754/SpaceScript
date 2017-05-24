@@ -1,14 +1,11 @@
 def clientTerminal(out_str):
-	if out_str !== 'none':
-		print("> ")
-	else:
+	if out_str !== chr(0):
 		print(out_str + '\n')
-		print("> ")
-	command_str = input()
+	command_str = input('>')
 	return command_str
-def terminal(option_int, out_str = 'none'):
+def terminal(option_int, out_str = chr(0)):
 	if option_int == 0:
-		if out_str == 'none':
+		if out_str == chr(0):
 			command_str = clientTerminal('Welcome to SpaceScript!!!')
 		else:
 			command_str = clientTerminal(out_str)
