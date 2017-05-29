@@ -1,1 +1,1 @@
-__all__ = ['terminal', 'midParser']
+__all__ = ['bashFunctions', 'terminal']
