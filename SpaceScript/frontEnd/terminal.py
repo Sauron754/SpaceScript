@@ -3,6 +3,7 @@ def clientTerminal(out_str):
 		print(out_str + '\n')
 	command_str = input('>')
 	return command_str
+
 def terminal(option_int, out_str = chr(0)):
 	if option_int == 0:
 		if out_str == chr(0):
