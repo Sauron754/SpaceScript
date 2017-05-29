@@ -1,0 +1,13 @@
+This txt file helps with the connection objects between threads
+
+simThread{
+	
+}
+
+termThread{
+	queues_arr[0] = terminal IO message Queue
+
+	pipes_arr[0] = bash command Pipe
+
+	holdValue = hold value for parent thread
+}
