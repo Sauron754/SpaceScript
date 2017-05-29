@@ -1,3 +1,5 @@
+import multiprocessing
+import queue
 import SpaceScript
 from SpaceScript import exceptions
 from SpaceScript.exceptions import frontEnd
@@ -9,3 +11,10 @@ def argumentCountCheck(argumentNumber_int, arguments_arr):
 		return False
 	else:
 		return True
+
+def safePull(queue):
+	try:
+		querry = queue.get_nowait()
+		return querry
+	except queue.Empty:
+		return False
