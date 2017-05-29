@@ -17,4 +17,4 @@ def safePull(queue):
 		querry = queue.get_nowait()
 		return querry
 	except queue.Empty:
-		return False
+		return chr(0)
