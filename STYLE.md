@@ -20,5 +20,6 @@ _q = queue(cross-thread object)</br>
 _p = pipe(cross-thread object)</br>
 _a = cross-thread array(cross-thread object)</br>
 _v = cross-thread value(cross-thread object)</br>
+_proc = multiprocessing threaded process</br>
 
 We are using a maximum line length of 80 characters(this can be neglected if it improves readability)
