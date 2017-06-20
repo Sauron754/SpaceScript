@@ -1,8 +1,5 @@
 def clientTerminal(out_str):
-	if out_str !== chr(0):
-		print(out_str + '\n')
-	command_str = input('>')
-	return command_str
+	
 
 def terminal(option_int, out_str = chr(0)):
 	if option_int == 0:
