@@ -5,9 +5,10 @@ simThread{
 }
 
 termThread{
-	queues_arr[0] = terminal IO message Queue
+	queues_arr[0] = contorl command Queue for communication between main and term
 
 	pipes_arr[0] = bash command Pipe
 
 	holdValue = hold value for parent thread
+	termThreadHold_v = hold value for low end tui/gui terminal
 }
