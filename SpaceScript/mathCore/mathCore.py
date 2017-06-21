@@ -37,10 +37,10 @@ def calcKeplerianObjects(orbital_obj):
 	v = orbital_obj.getVelocity()
 	evec = calcExcentricity(orbital_obj) #calculed eccentricity vector
 	e = vectorAlgebra.abs(evec) #calculate eccentricity
-	energy = 
+	energy = vectorAlgebra.abs(v)**2/2-constants.G/r
 	
 	
-def calcExcentricity(orbital_obj):
+'''def calcExcentricity(orbital_obj):
 	orbitalPosition_arr = orbital_obj.position_arr
 	orbitalVelocity_arr = orbital_obj.getVelocity()
 	h = vectorAlgebra.crossProduct(orbitalPosition_arr, orbitalVelocity_arr)
@@ -48,6 +48,10 @@ def calcExcentricity(orbital_obj):
 	evec = ((vectorAlgebra.abs(v)**2-mu/vectorAlgebra.abs(r))*r-vectorAlgebra.vectorScalarProduct(r,v)*v)/constants.mu
 	e = vectorAlgebra.abs(evec)
 	return e 
+''' #method as layed out in stackexchange forum. no clue if it works or not.
+
+#now using method as layed out in "orbital mechanics and astrodynamics" by gerald r. hintz
 	
-def 
+def calcInclination(r_arr, v_arr):
+	hhat_arr = 
 	
