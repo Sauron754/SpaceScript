@@ -10,6 +10,9 @@ from SpaceScript.utility import terminalUtility
 from SpaceScript.utility.terminalUtility import safePull as safePull
 from multiprocessing import Queue, Pipe, Value
 
+global controlQueue_q
+global promtCommandPipe_p
+global mainHoldValue_v
 controlQueue_q = multiprocessing.Queue()
 promtCommandPipe_p = multiprocessing.Pipe()
 mainHoldValue_v = multiprocessing.Value()
