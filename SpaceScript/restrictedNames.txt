@@ -7,3 +7,11 @@ transferPullQueue_q
 transferPushQueue_q
 transferParentHold_v
 transferHold_v
+commandPipe
+controlQueue_q
+pullString_q
+pushString_q
+termThreadHold_v
+guiHold_v
+termThread
+subProcess
