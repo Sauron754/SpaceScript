@@ -1,5 +1,4 @@
 import multiprocessing
-import queue
 import SpaceScript
 from SpaceScript import exceptions
 from SpaceScript.exceptions import frontEnd
