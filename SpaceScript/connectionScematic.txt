@@ -11,4 +11,5 @@ termThread{
 
 	holdValue = hold value for parent thread
 	termThreadHold_v = hold value for low end tui/gui terminal
+	mainHoldValue_v = hold value for main.py
 }
