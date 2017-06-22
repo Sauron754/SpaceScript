@@ -48,3 +48,7 @@ def termThreadControlHandler(holdValue_v, controlString_q, pushString_q, childHo
 			#maybe add an error into here
 	else:
 		return False
+
+def terminalOutput(string_str):
+	controlQueue_q.send("out " + str(string_str))
+	return True
