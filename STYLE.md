@@ -1,7 +1,7 @@
 We use PEP8 style guiding with a couple exceptions/specifications:
 
 variable names: camelCase
-function names: underline
+function names: camelCase
 method names: underline
 class names: camelCase
 global variables(only allowed inside one module): _camelCase
