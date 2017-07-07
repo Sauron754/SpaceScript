@@ -21,8 +21,9 @@ def clientTerminal(pullString_q, pushString_q, holdValue_v, ParentHoldValue_v):
 
 def submit(key):
 	inputString_str = term.getEntry("BASH")
-	transferQueue_q.put(inputString_str)
+	transferPullQueue_q.put(inputString_str)
 	transferParentHold_v.value = True
+	term.addListItems("BASH", [inputString_str])
 	return True
 
 def terminalRefresh():
