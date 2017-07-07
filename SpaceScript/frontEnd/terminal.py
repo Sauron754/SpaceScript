@@ -32,9 +32,9 @@ def terminalRefresh():
 	else:
 		return False
 
-def terminal(option, pullString_q, pushString_q):
+def terminal(option, pullString_q, pushString_q, holdValue_v, ParentHoldValue_v):
 	if option == 0:
-		clientTerminal(pullString_q, pushString_q)
+		clientTerminal(pullString_q, pushString_q, holdValue_v, ParentHoldValue_v)
 		return True
 	else:
 		return False
