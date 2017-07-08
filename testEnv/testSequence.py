@@ -53,8 +53,8 @@ def main():
 			return True
 		else:
 			failure_arr = failureSearch(check)
-			print("An Error occured in function " + failure_arr[0] + 
-				  "! \n At runthrough " + failure_arr[1] + ";")
+			print("An Error occured in function " + str(failure_arr[0]) + 
+				  "! \n At runthrough " + str(failure_arr[1]) + ";")
 
 
 function_arr = [testEnv.utility.vectorAlgebraFunctional.dimensionCheckFatal,
