@@ -1,13 +1,13 @@
 from appJar import gui
 from multiprocessing import Queue
 
-def clientTerminal(pullString_q, pushString_q, holdValue_v, ParentHoldValue_v):
+def clientTerminal(pullString_q, pushString_q, holdValue_v, parentHoldValue_v):
 	global term
 	global transferPullQueue_q
 	global transferPushQueue_q
 	global transferParentHold_v
 	global transferHold_v
-	transferParentHold_v = ParentHoldValue_v
+	transferParentHold_v = parentHoldValue_v
 	transferHold_v = holdValue_v
 	transferPullQueue_q = pullString_q
 	transferPushQueue_q = pushString_q
@@ -33,9 +33,9 @@ def terminalRefresh():
 	else:
 		return False
 
-def terminal(option, pullString_q, pushString_q, holdValue_v, ParentHoldValue_v):
+def terminal(option, pullString_q, pushString_q, holdValue_v, parentHoldValue_v):
 	if option == 0:
-		clientTerminal(pullString_q, pushString_q, holdValue_v, ParentHoldValue_v)
+		clientTerminal(pullString_q, pushString_q, holdValue_v, parentHoldValue_v)
 		return True
 	else:
 		return False
