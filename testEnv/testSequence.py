@@ -55,6 +55,7 @@ def main():
 			failure_arr = failureSearch(check)
 			print("An Error occured in function " + str(failure_arr[0]) + 
 				  "! \n At runthrough " + str(failure_arr[1]) + ";")
+			return False
 
 
 function_arr = [testEnv.utility.vectorAlgebraFunctional.dimensionCheckFatal,
