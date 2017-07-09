@@ -18,23 +18,23 @@ from testEnv.utility import vectorAlgebraFunctional
 functions_dict = {"frontEnd/terminal/clientTerminalIOTest":
 				  testEnv.frontEnd.terminal.clientTerminalIOTest, 
 				  "utility/vectorAlgebra/dimensionCheckFatal":
-				  testEnv.utility.vectorAlgebra.dimensionCheckFatal,
+				  testEnv.utility.vectorAlgebraFunctional.dimensionCheckFatal,
 				  "utility/vecotrAlgebra/dimensionCheck":
-				  testEnv.utility.vectorAlgebra.dimensionCheck,
+				  testEnv.utility.vectorAlgebraFunctional.dimensionCheck,
 				  "utility/vectorAlgebra/add":
-				  testEnv.utility.vectorAlgebra.add,
+				  testEnv.utility.vectorAlgebraFunctional.add,
 				  "utility/vectorAlgebra/dotProduct":
-				  testEnv.utility.vectorAlgebra.dotProduct,
+				  testEnv.utility.vectorAlgebraFunctional.dotProduct,
 				  "utility/vectorAlgebra/vectorScalarProduct":
-				  testEnv.utility.vectorAlgebra.vectorScalarProduct,
+				  testEnv.utility.vectorAlgebraFunctional.vectorScalarProduct,
 				  "utility/vectorAlgebra/length":
-				  testEnv.utility.vectorAlgebra.length,
+				  testEnv.utility.vectorAlgebraFunctional.length,
 				  "utility/vectorAlgebra/crossProduct":
-				  testEnv.utility.vectorAlgebra.crossProduct,
+				  testEnv.utility.vectorAlgebraFunctional.crossProduct,
 				  "utility/vectorAlgebra/invert":
-				  testEnv.utility.vectorAlgebra.invert,
+				  testEnv.utility.vectorAlgebraFunctional.invert,
 				  "utility/vectorAlgebra/angle":
-				  testEnv.utility.vectorAlgebra.angle}
+				  testEnv.utility.vectorAlgebraFunctional.angle}
 
 def main():
 	continue_str = "y"
