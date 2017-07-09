@@ -1,1 +1,1 @@
-path = C:\Data\Python_Library\SpaceScript\SpaceScript\testEnvironments\Env1
+path = 
