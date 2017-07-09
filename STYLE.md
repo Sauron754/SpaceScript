@@ -23,3 +23,5 @@ _v = cross-thread value(cross-thread object)</br>
 _proc = multiprocessing threaded process</br>
 
 We are using a maximum line length of 80 characters(this can be neglected if it improves readability)
+Said does not apply for import statements as a)they cannot be split
+											 b)it does not improve readability
