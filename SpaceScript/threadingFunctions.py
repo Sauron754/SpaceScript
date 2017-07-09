@@ -23,10 +23,11 @@ def termThread(queues_arr, pipes_arr, holdValue_v, objectArray_arr = None,
 	pushString_q = multiprocessing.Queue()
 	termThreadHold_v = multiprocessing.Value()
 	guiHold_v = multiprocessing.Value()
-	termThreadHold_v.value() = False
-	subProcess = multiprocessing.Process(target = terminal, args = (
+	guiHold_v.value = False
+	termThreadHold_v.value = False
+	subProcess = multiprocessing.Process(target = terminal, args = (0,
 										pullString_q, pushString_q,
-										termThreadHold_v))
+										guiHold_v, termThreadHold_v))
 	subProcess.start()
 	checkSequence_bool = True
 	while checkSequence_bool:
