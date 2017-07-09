@@ -5,7 +5,7 @@ from SpaceScript import frontEnd
 from SpaceScript import utility
 from SpaceScript.frontEnd import terminal
 from SpaceScript.utility import terminalUtility
-from SpaceScript.terminal import terminal
+from SpaceScript.terminal import terminal as terminal
 from SpaceScript.utility.terminalUtility import safePull as safePull
 from SpaceScript.utility.terminalUtility import termThreadEventHandler as termThreadEventHandler
 from SpaceScript.utility.terminalUtility import termThreadControlHandler as termThreadControlHandler
