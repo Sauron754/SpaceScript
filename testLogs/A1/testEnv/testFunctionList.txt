@@ -1,0 +1,14 @@
+-frontEnd
+	~terminal
+		*clientTerminalIOTest #not executable by computer
+-utility
+	~vectorAlgebraFunctional
+		*dimensionCheckFatal
+		*dimensionCheck
+		*add
+		*dotProduct
+		*vectorScalarProduct
+		*length
+		*crossProduct
+		*invert
+		*angle

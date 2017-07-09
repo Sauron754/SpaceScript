@@ -1,0 +1,12 @@
+This is a list of all global variables which are beeing used by the code!
+(Although we try to limit definition of global variables, sometimes it is
+nesessary)
+
+term
+transferPullQueue_q
+transferPushQueue_q
+transferParentHold_v
+transferHold_v
+controlQueue_q
+promtCommandPipe_p
+mainHoldValue_v

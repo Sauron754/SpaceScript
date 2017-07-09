@@ -1,0 +1,6 @@
+testEnv
+
+terminal
+	clientTerminalIOTest
+		-This test cannot be executed by a computer and must be conducted by a
+		 human
