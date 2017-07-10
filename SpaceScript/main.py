@@ -3,7 +3,7 @@ import multiprocessing
 from SpaceScript import frontEnd
 from SpaceScript import threadingFunctions
 from SpaceScript import utility
-from SpaceScript.frontEnd import bashFunctions as bashFunctions
+from SpaceScript.frontEnd import commandlineFunctions as commandlineFunctions
 from SpaceScript.threadingFunctions import simThread as simThread
 from SpaceScript.threadingFunctions import termThread as termThread
 from SpaceScript.utility import terminalUtility
@@ -27,7 +27,7 @@ while loopActive:
 	if mainHoldValue_v.value:
 		if promtCommandPipe_p.poll():
 			command_arr = promtCommandPipe_p.recv()
-			function = getattr(bashFunctions, command_arr[0])
+			function = getattr(commandlineFunctions, command_arr[0])
 			function(command_arr[1])
 			mainHoldValue_v.value = False
 		else:
