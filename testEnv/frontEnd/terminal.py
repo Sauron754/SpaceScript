@@ -5,14 +5,14 @@ def clientTerminalIOTest():
 	#to verify the codes integrity himself
 	import multiprocessing
 	import SpaceScript
-	from multiprocessing import Process, Query, Value
+	from multiprocessing import Process, Queue, Value
 	from SpaceScript import frontEnd
 	from SpaceScript.frontEnd import terminal
-	from SpaceScript.terminal import terminal as terminal
-	pullQueue_q = multiprocessing.Query()
-	pushQueue_q = multiprocessing.Query()
-	holdValue_v = multiprocessing.Value()
-	childHoldValue_v = multiprocessing.Value()
+	from SpaceScript.frontEnd.terminal import terminal as terminal
+	pullQueue_q = multiprocessing.Queue()
+	pushQueue_q = multiprocessing.Queue()
+	holdValue_v = multiprocessing.Value('h')
+	childHoldValue_v = multiprocessing.Value('h')
 	thread = multiprocessing.Process(target = terminal, args = (0, pullQueue_q,
 									 pushQueue_q, childHoldValue_v,
 									 holdValue_v))
