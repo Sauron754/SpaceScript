@@ -9,6 +9,7 @@ def clientTerminalIOTest():
 	from SpaceScript import frontEnd
 	from SpaceScript.frontEnd import terminal
 	from SpaceScript.frontEnd.terminal import terminal as terminal
+	mainLoop_bool = True
 	pullQueue_q = multiprocessing.Queue()
 	pushQueue_q = multiprocessing.Queue()
 	holdValue_v = multiprocessing.Value('h')
@@ -19,3 +20,14 @@ def clientTerminalIOTest():
 	print("You should now see this message displayed in the gui!")
 	pushQueue_q.put("You should now see this message displayed in the gui")
 	childHoldValue_v.value = True
+	while mainLoop_bool:
+		if holdValue_v.value == True:
+			outString_str = pullQueue_q.get()
+			if outString_str == "stop":
+				return None
+			elif outString_str == "cancel":
+				return None
+			elif outString_str == "exit":
+				return None
+			else:
+				print(outString_str)

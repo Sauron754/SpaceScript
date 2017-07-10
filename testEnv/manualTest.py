@@ -36,17 +36,31 @@ functions_dict = {"frontEnd/terminal/clientTerminalIOTest":
 				  "utility/vectorAlgebra/angle":
 				  testEnv.utility.vectorAlgebraFunctional.angle}
 
+noneReturnFunctions_arr = ["frontEnd/terminal/clientTerminalIOTest"]
+
+def elementOf(element, list_arr):
+	for iteration in range(len(list_arr)):
+		if element == list_arr[iteration]:
+			return True
+		else:
+			pass
+	else:
+		return False
+
 def main():
 	continue_str = "y"
 	while continue_str == "y":
 		continue_str = str(input("Continue: "))
 		command_str = str(input("Function: "))
 		runthrough = functions_dict[command_str]()
-		try:
-			index = runthrough.index(False)
-			print("Error at runthrough" + str(index + 1))
-		except ValueError:
-			print("Function is working clean!")
+		if command_str !== elementOf(command_str, noneReturnFunctions_arr):
+			try:
+				index = runthrough.index(False)
+				print("Error at runthrough" + str(index + 1))
+			except ValueError:
+				print("Function is working clean!")
+		else:
+			print("Function has finished working")
 	else:
 		return True
 
