@@ -53,7 +53,7 @@ def main():
 		continue_str = str(input("Continue: "))
 		command_str = str(input("Function: "))
 		runthrough = functions_dict[command_str]()
-		if command_str !== elementOf(command_str, noneReturnFunctions_arr):
+		if command_str != elementOf(command_str, noneReturnFunctions_arr):
 			try:
 				index = runthrough.index(False)
 				print("Error at runthrough" + str(index + 1))
